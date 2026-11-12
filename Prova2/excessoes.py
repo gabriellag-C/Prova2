@@ -1,8 +1,8 @@
 class AgendaError(Exception):
-    pass
+    """Erros da classe Agenda"""
 
 class HorarioIndisponivelError(AgendaError):
-    """Horario Indisponivel"""
+    """Horário Indisponível"""
 
 class PacienteJaAgendadoError(AgendaError):
     """ Paciente já Agendado"""
