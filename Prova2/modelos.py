@@ -72,8 +72,7 @@ class Agenda:
                 raise PacienteJaAgendadoError(f"O paciente {atendimento.paciente.nome} já possui atendimento agendado.")
             minutos_livres: int = (self._limite_minutos - self.minutos_ocupados)
             if atendimento.duracao_minutos() > minutos_livres:
-                raise HorarioIndisponivelError(f"Tempo insuficiente na agenda. Minutos livres: {minutos_livres};necessários: {atendimento.duracao_minutos()}.")
-
+                raise HorarioIndisponivelError(f"Tempo insuficiente. Minutos livres: {minutos_livres};necessários: {atendimento.duracao_minutos()}.")
         self.__atendimentos.append(atendimento)
 
 
